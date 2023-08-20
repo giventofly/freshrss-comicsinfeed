@@ -26,6 +26,15 @@ Then go to your FreshRSS installation and activate the extension in the extensio
 
 More extensions can be found at [FreshRSS/Extensions](https://github.com/FreshRSS/Extensions).
 
+## To add more comics
+
+Essentially create a new file for your comic on the folder `./comics/` see the other files there for examples, add it to be loaded on the './comics/load.php' file and add the comic to the list of comics on the `./comics/loader.php` file.
+
+Edit the `extension.php` file to make the match for the feed and the new function to generate the new image source.
+
+Feel free for any pull request or to make a request for a new comic (if I have time I will add it).
+
+
 ## Changelog
 
 #### 1.0
