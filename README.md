@@ -1,0 +1,35 @@
+# FreshRSS - "Comics in Feed" extension
+
+This FreshRSS extension allows you to directly enjoy the [The awkward yeti](https://theawkwardyeti.com/) and [Buttersafe](https://www.buttersafe.com/) comics within your FreshRSS installation.
+
+To use it, upload the ```freshrss-comicsinfeed``` directory to the FreshRSS `./extensions` directory on your server and enable it on the extension panel in FreshRSS.
+
+I will probably be adding more comics in the future (when/if I start reading them) but feel free to add your own with a pull request.
+
+
+## Requirements
+
+This FreshRSS extension uses the PHP extension [DOM](http://php.net/dom) and [XML](http://php.net/xml).
+
+As those are requirements by [FreshRSS](https://github.com/FreshRSS/FreshRSS) itself, you should be good to go.
+
+
+## Installation
+
+To install an extension, download the extension archive first and extract it on your PC (or directly on your host). Then, upload/move the folder you want on your server. Extensions must be in the ./extensions directory of your FreshRSS installation.
+
+Then go to your FreshRSS installation and activate the extension in the extension panel - https://localhost/FreshRSS/p/i/?c=extension - and activate it.
+
+## About FreshRSS
+
+[FreshRSS](https://freshrss.org/) is a great self-hosted RSS Reader written in PHP, which is can also be found here at [GitHub](https://github.com/FreshRSS/FreshRSS).
+
+More extensions can be found at [FreshRSS/Extensions](https://github.com/FreshRSS/Extensions).
+
+## Changelog
+
+#### 1.0
+
+20 August 2023
+ - Parses comics images from [The awkward yeti](https://theawkwardyeti.com/) feed to display fully in FreshRSS
+ - Parses comics images from [Buttersafe](https://www.buttersafe.com/) feed to display fully in FreshRSS

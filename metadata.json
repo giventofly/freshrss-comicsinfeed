@@ -1,0 +1,8 @@
+{
+	"name": "Comics in feed",
+	"author": "José Moreira",
+	"description": "Embed the images from comics feeds directly.",
+	"version": "1.0.0",
+	"entrypoint": "ComicsInFeed",
+	"type": "system"
+}
