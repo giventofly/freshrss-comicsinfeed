@@ -1,6 +1,6 @@
 # FreshRSS - "Comics in Feed" extension
 
-This FreshRSS extension allows you to directly enjoy the [The awkward yeti](https://theawkwardyeti.com/) and [Buttersafe](https://www.buttersafe.com/) comics within your FreshRSS installation.
+This FreshRSS extension allows you to directly comics like [The awkward yeti](https://theawkwardyeti.com/), [Buttersafe](https://www.buttersafe.com/) and more comics within your FreshRSS installation.
 
 To use it, upload the ```freshrss-comicsinfeed``` directory to the FreshRSS `./extensions` directory on your server and enable it on the extension panel in FreshRSS.
 
@@ -34,8 +34,19 @@ Edit the `extension.php` file to make the match for the feed and the new functio
 
 Feel free for any pull request or to make a request for a new comic (if I have time I will add it).
 
+## Currently supported comics
+
+- [The awkward yeti](https://theawkwardyeti.com/)
+- [Buttersafe](https://www.buttersafe.com/)
+- [buni](https://www.bunicomic.com/)
+
 
 ## Changelog
+
+#### 1.1
+
+2 September 2023
+  - Parses comics images from [buni](https://www.bunicomic.com/) feed to display fully in FreshRSS
 
 #### 1.0
 

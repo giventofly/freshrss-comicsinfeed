@@ -59,6 +59,10 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'theawkwardyeti.com') === false ) {
             return 2;
         }
+        //buni
+        if (!stripos($link, 'bunicomic.com') === false ) {
+            return 3;
+        }
 
         return 0;
     }
@@ -83,6 +87,10 @@ class ComicsInFeedExtension extends Minz_Extension{
             }
             case 2: {
                 $entry = parseTheAwkwardYeti($entry);
+                break;
+            }
+            case 3: {
+                $entry = parseBuni($entry);
                 break;
             }
         }
