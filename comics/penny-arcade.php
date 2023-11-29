@@ -46,61 +46,72 @@
   Once we have the 3 panels, we can strip the `@2x` for the double-sized image.
 */
 function parsePennyArcade($entry){
-
   $dom = new DOMDocument;
   $dom->loadHTML($entry->content());
   libxml_use_internal_errors(false);
 
-  // TODO: get link to comic page from RSS Feed Entry..
-  $comicUrl = 'https://www.penny-arcade.com/comic/2023/11/29/steam-dork';
-  // Load & parse comic page for panels.
-  $panels = parseComicPanelLinks($comicUrl);
-  // Inject panels back into RSS Feed Entry.
-  foreach($panels as $panel) {
-      // TODO: Do I need to convert panel back into an xml image attribute?
-      $entry->_content($panel->ownerDocument->saveHTML($dom));
+  // Get link to comic page from RSS Feed Entry..
+  $comicUrl = $entry->link();
+
+  if (str_contains($comicUrl, 'news')) {
+      // Early return on news entries!
+      return $entry;
   }
 
-
-  // $xpath = new DOMXpath($dom);
-
-  // $pattern = '/assets\.penny-arcade\.com\/comics/panels/(.+)\.jpg/i';
-  // $image = $xpath->query("//img");
-
-  // if (!is_null($image)) {
-  //   $image = $image->item(0);
-  //   if (!is_null($image)) {
-  //     $source = $image->getAttribute('src');
-  //     if (preg_match($pattern, $source, $matches)) {
-  //       // $image->removeAttribute('width');
-  //       // $image->removeAttribute('height');
-  //       // $pattern = '/(-\d+x\d+)\.(jpg|png|gif)$/';
-  //       // $modifiedString = preg_replace($pattern, '.$2', $source);
-  //       // $image->setAttribute('src', $modifiedString);
-  //       $entry->_content($image->ownerDocument->saveHTML($dom));
-  //     }
-  //   }
-  // }
-
-  // var_dump($entry);
+  // Load & parse comic page for panels.
+  $imgLinks = parseComicPanelLinks($comicUrl);
+  // Inject panels back into RSS Feed Entry.
+  foreach($imgLinks as $img) {
+      $image = $dom->createElement('img');
+      $image->setAttribute('src', $img);
+      $body = $dom->getElementsByTagName('body')->item(0);
+      $body->appendChild($image);
+  }
+  $entry->_content($dom->saveHTML());
   return $entry;
 }
 
 
 //parse comic panels from comic page.
 function parseComicPanelLinks(string $comicUrl): array {
-  $dom = new DOMDocument;
-  $dom->loadHTMLFile($comicUrl, LIBXML_NOWARNING | LIBXML_NOERROR);
-  // var_dump($dom);
-  $imgs = array();
-  $comicPanelsXml = $dom->getElementById('comic-panels');
-  foreach($comicPanelsXml->getElementsByTagName('img') as $img) {
-      $imgs[] = $img->getAttribute('src');
-  }
-  print "panels: ";
-  var_dump($imgs);
-  return $imgs;
+  $htmlContent = bypassGDPRAccept($comicUrl, 'reject');
+  $imgLinks = scrapeImgLinks($htmlContent);
+  return $imgLinks;
 }
 
-// parsePennyArcade('https://www.penny-arcade.com/feed');
-parseComicPanelLinks('https://www.penny-arcade.com/comic/2023/11/29/steam-dork');
+
+// Function to bypass the JavaScript GDPR prompt using cURL.
+function bypassGDPRAccept($url, $cookieType = 'reject') {
+  // Set the cookie type based on the parameter
+  $cookieValue = '';
+  if ($cookieType === 'reject') {
+    $cookieValue = "gdpr[consent_types]=%7B%22necessary%22%3Atrue%7D";
+  } elseif ($cookieType === 'necessaryonly') {
+    $cookieValue = "gdpr[consent_types]=%7B%22necessary%22%3Atrue%2C%22preferences%22%3Afalse%2C%22statistics%22%3Afalse%2C%22marketing%22%3Afalse%7D";
+  }
+
+  // Make a cURL request to load the URL and bypass the prompt
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_COOKIE, $cookieValue);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $output = curl_exec($ch);
+  curl_close($ch);
+
+  return $output;
+}
+
+// Function to scrape Comic Panel img links from HTML using DOMDocument.
+function scrapeImgLinks($html) {
+  $dom = new DOMDocument;
+  @$dom->loadHTML($html);
+  $comicPanelsClass = $dom->getElementById('comic-panels');
+  $imgTags = $comicPanelsClass->getElementsByTagName('img');
+  $imgLinks = [];
+
+  foreach ($imgTags as $imgTag) {
+    $imgLinks[] = $imgTag->getAttribute('src');
+  }
+
+  return $imgLinks;
+}
