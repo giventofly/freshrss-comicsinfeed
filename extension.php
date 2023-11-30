@@ -63,6 +63,10 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'bunicomic.com') === false ) {
             return 3;
         }
+        //xkcd
+        if (!stripos($link, 'xkcd.com') === false ) {
+            return 4;
+        }
 
         return 0;
     }
@@ -91,6 +95,10 @@ class ComicsInFeedExtension extends Minz_Extension{
             }
             case 3: {
                 $entry = parseBuni($entry);
+                break;
+            }
+            case 4: {
+                $entry = parseXkcd($entry);
                 break;
             }
         }
