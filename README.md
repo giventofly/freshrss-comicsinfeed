@@ -39,7 +39,7 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [The awkward yeti](https://theawkwardyeti.com/)
 - [Buttersafe](https://www.buttersafe.com/)
 - [buni](https://www.bunicomic.com/)
-
+- [Penny-Arcade](https://penny-arcade.com/)
 
 ## Changelog
 
