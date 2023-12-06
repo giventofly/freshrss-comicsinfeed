@@ -6,6 +6,9 @@ require_once __DIR__ . '/buttersafe.php';
 require_once __DIR__ . '/theawkwardyeti.php';
 //buni
 require_once __DIR__ . '/buni.php';
-//PennyArcade
+//xkcd
+require_once __DIR__ . '/xkcd.php';
+//penny arcade
 require_once __DIR__ . '/penny-arcade.php';
+
 ?>

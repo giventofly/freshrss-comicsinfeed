@@ -67,7 +67,11 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'penny-arcade.com') === false ) {
             return 4;
         }
-
+         //xkcd
+        if (!stripos($link, 'xkcd.com') === false ) {
+           return 5;
+        }
+      
         return 0;
     }
 
@@ -101,8 +105,11 @@ class ComicsInFeedExtension extends Minz_Extension{
                 $entry = parsePennyArcade($entry);
                 break;
             }
-        }
+            case 5: {
+              $entry = parseXkcd($entry);
+              break;
+            }
 
         return $entry;
-    }
+     }
 }
