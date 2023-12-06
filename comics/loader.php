@@ -8,4 +8,7 @@ require_once __DIR__ . '/theawkwardyeti.php';
 require_once __DIR__ . '/buni.php';
 //xkcd
 require_once __DIR__ . '/xkcd.php';
+//penny arcade
+require_once __DIR__ . '/penny-arcade.php';
+
 ?>

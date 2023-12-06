@@ -39,9 +39,17 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [The awkward yeti](https://theawkwardyeti.com/)
 - [Buttersafe](https://www.buttersafe.com/)
 - [buni](https://www.bunicomic.com/)
+- [Penny-Arcade](https://penny-arcade.com/)
 - [xkcd](https://xkcd.com/)
 
+
 ## Changelog
+
+#### 1.2
+
+6 December 2023
+  - Added [xkcd](https://xkcd.com/) images alt text, thanks to [jackson15j](https://github.com/jackson15j)
+  - Penny Arcade [Penny-Arcade](https://penny-arcade.com/), thanks to [jackson15j](https://github.com/jackson15j)
 
 #### 1.1
 
