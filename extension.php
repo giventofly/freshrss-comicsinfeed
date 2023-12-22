@@ -109,6 +109,7 @@ class ComicsInFeedExtension extends Minz_Extension{
               $entry = parseXkcd($entry);
               break;
             }
+        }
 
         return $entry;
      }
