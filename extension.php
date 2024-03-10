@@ -71,6 +71,10 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'xkcd.com') === false ) {
            return 5;
         }
+        //explosm
+        if (!stripos($link, 'explosm.net') === false ) {
+           return 6;
+        }
       
         return 0;
     }
@@ -107,6 +111,10 @@ class ComicsInFeedExtension extends Minz_Extension{
             }
             case 5: {
               $entry = parseXkcd($entry);
+              break;
+            }
+            case 6: {
+              $entry = parseExplosm($entry);
               break;
             }
         }
