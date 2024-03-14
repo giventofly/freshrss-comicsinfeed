@@ -46,8 +46,13 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 
 ## Changelog
 
-#### 1.2
+#### 1.3
 
+14 March 2024
+  - Added [Explosm](https://explosm.net/) from hidden xml rss feed thanks to [wiiaboo](https://github.com/wiiaboo)
+
+#### 1.2
+ 
 6 December 2023
   - Added [xkcd](https://xkcd.com/) images alt text, thanks to [jackson15j](https://github.com/jackson15j)
   - Penny Arcade [Penny-Arcade](https://penny-arcade.com/), thanks to [jackson15j](https://github.com/jackson15j)
