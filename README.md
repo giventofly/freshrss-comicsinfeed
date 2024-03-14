@@ -41,6 +41,7 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [buni](https://www.bunicomic.com/)
 - [Penny-Arcade](https://penny-arcade.com/)
 - [xkcd](https://xkcd.com/)
+- [Explosm](https://explosm.net/) ([RSS feed](https://explosm.net/rss.xml))
 
 
 ## Changelog
