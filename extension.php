@@ -75,6 +75,10 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'explosm.net') === false ) {
            return 6;
         }
+        //monster under the bed
+        if (!stripos($link, 'themonsterunderthebed.net') === false ) {
+            return 7;
+         }
       
         return 0;
     }
@@ -115,6 +119,10 @@ class ComicsInFeedExtension extends Minz_Extension{
             }
             case 6: {
               $entry = parseExplosm($entry);
+              break;
+            }
+            case 7: {
+              $entry = parseMonsterUnderBed($entry);
               break;
             }
         }

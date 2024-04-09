@@ -42,9 +42,15 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [Penny-Arcade](https://penny-arcade.com/)
 - [xkcd](https://xkcd.com/)
 - [Explosm](https://explosm.net/) ([RSS feed](https://explosm.net/rss.xml))
+- [The Monster under the bed](https://www.themonsterunderthebed.net/)
 
 
 ## Changelog
+
+#### 1.4
+
+9 April 2024
+  - Added [The Monster under the bed](https://www.themonsterunderthebed.net/) from a user request [issue #5](https://github.com/giventofly/freshrss-comicsinfeed/issues/5)
 
 #### 1.3
 

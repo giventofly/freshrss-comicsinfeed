@@ -12,5 +12,7 @@ require_once __DIR__ . '/xkcd.php';
 require_once __DIR__ . '/penny-arcade.php';
 //explosm
 require_once __DIR__ . '/explosm.php';
+//monster under the bed
+require_once __DIR__ . '/monsterunderbed.php';
 
 ?>
