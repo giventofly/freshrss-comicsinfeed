@@ -43,6 +43,10 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [xkcd](https://xkcd.com/)
 - [Explosm](https://explosm.net/) ([RSS feed](https://explosm.net/rss.xml))
 - [The Monster under the bed](https://www.themonsterunderthebed.net/)
+- [Flipside](https://flipside.gushi.org) ([RSS feed](https://flipsidecomics.com/flipsiderss.php))
+- [Girl Genius](https://www.girlgeniusonline.com/comic.php)
+- [Questionable Content](https://questionablecontent.net/)
+- [Sluggy Freelance](https://sluggy.com/)
 
 
 ## Changelog
@@ -58,7 +62,7 @@ Feel free for any pull request or to make a request for a new comic (if I have t
   - Added [Explosm](https://explosm.net/) from hidden xml rss feed thanks to [wiiaboo](https://github.com/wiiaboo)
 
 #### 1.2
- 
+
 6 December 2023
   - Added [xkcd](https://xkcd.com/) images alt text, thanks to [jackson15j](https://github.com/jackson15j)
   - Penny Arcade [Penny-Arcade](https://penny-arcade.com/), thanks to [jackson15j](https://github.com/jackson15j)
