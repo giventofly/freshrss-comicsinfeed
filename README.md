@@ -51,6 +51,16 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 
 ## Changelog
 
+#### 1.5
+
+2 May 2024
+
+Added these new comics by [Joel Goguen](https://github.com/jgoguen)
+- [Flipside](https://flipside.gushi.org) ([RSS feed](https://flipsidecomics.com/flipsiderss.php))
+- [Girl Genius](https://www.girlgeniusonline.com/comic.php)
+- [Questionable Content](https://questionablecontent.net/)
+- [Sluggy Freelance](https://sluggy.com/)
+
 #### 1.4
 
 9 April 2024
