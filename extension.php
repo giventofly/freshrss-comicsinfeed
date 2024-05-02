@@ -67,7 +67,7 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'penny-arcade.com') === false ) {
             return 4;
         }
-         //xkcd
+        //xkcd
         if (!stripos($link, 'xkcd.com') === false ) {
            return 5;
         }
@@ -78,8 +78,24 @@ class ComicsInFeedExtension extends Minz_Extension{
         //monster under the bed
         if (!stripos($link, 'themonsterunderthebed.net') === false ) {
             return 7;
-         }
-      
+        }
+        // Sluggy Freelance
+        if (!stripos($link, 'sluggy.com') === false) {
+            return 8;
+        }
+        // Girl Genius
+        if (!stripos($link, 'girlgeniusonline.com') === false) {
+            return 9;
+        }
+        // Questionable Content
+        if (!stripos($link, 'questionablecontent.net') === false) {
+            return 10;
+        }
+        // Flipside
+        if (!stripos($link, 'flipside.gushi.org') === false) {
+            return 11;
+        }
+
         return 0;
     }
 
@@ -124,6 +140,22 @@ class ComicsInFeedExtension extends Minz_Extension{
             case 7: {
               $entry = parseMonsterUnderBed($entry);
               break;
+            }
+            case 8: {
+                $entry = parseSluggyFreelance($entry);
+                break;
+            }
+            case 9: {
+                $entry = parseGirlGenius($entry);
+                break;
+            }
+            case 10: {
+                $entry = parseQuestionableContent($entry);
+                break;
+            }
+            case 11: {
+                $entry = parseFlipside($entry);
+                break;
             }
         }
 

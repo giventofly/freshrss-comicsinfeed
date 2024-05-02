@@ -14,5 +14,13 @@ require_once __DIR__ . '/penny-arcade.php';
 require_once __DIR__ . '/explosm.php';
 //monster under the bed
 require_once __DIR__ . '/monsterunderbed.php';
+//Sluggy Freelance
+require_once __DIR__ . '/sluggy.php';
+//Girl Genius
+require_once __DIR__ . '/girlgenius.php';
+//Questionable Content
+require_once __DIR__ . '/questionablecontent.php';
+//Flipside
+require_once __DIR__ . '/flipside.php';
 
 ?>
