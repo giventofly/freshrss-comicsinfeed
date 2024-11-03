@@ -1,3 +1,5 @@
+<?php
+
 /** Parse Bouletcorp feed
 
   The feed contents don't contain the comic, it is needed to:
