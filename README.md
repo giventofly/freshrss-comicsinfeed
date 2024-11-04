@@ -52,6 +52,13 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 
 ## Changelog
 
+#### 1.6
+
+4 Nov 2024
+
+Added [Bouletcorp](https://www.bouletcorp.com/) by [SamZub](https://github.com/SamZub)
+
+
 #### 1.5
 
 2 May 2024
