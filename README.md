@@ -47,6 +47,7 @@ Feel free for any pull request or to make a request for a new comic (if I have t
 - [Girl Genius](https://www.girlgeniusonline.com/comic.php)
 - [Questionable Content](https://questionablecontent.net/)
 - [Sluggy Freelance](https://sluggy.com/)
+- [Bouletcorp](https://www.bouletcorp.com/)
 
 
 ## Changelog

@@ -22,5 +22,7 @@ require_once __DIR__ . '/girlgenius.php';
 require_once __DIR__ . '/questionablecontent.php';
 //Flipside
 require_once __DIR__ . '/flipside.php';
+//Bouletcorp
+require_once __DIR__ . '/bouletcorp.php';
 
 ?>

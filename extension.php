@@ -95,6 +95,10 @@ class ComicsInFeedExtension extends Minz_Extension{
         if (!stripos($link, 'flipside.gushi.org') === false) {
             return 11;
         }
+        // Bouletcorp
+        if (!stripos($link, 'bouletcorp.com') === false) {
+            return 12;
+        }
 
         return 0;
     }
@@ -155,6 +159,10 @@ class ComicsInFeedExtension extends Minz_Extension{
             }
             case 11: {
                 $entry = parseFlipside($entry);
+                break;
+            }
+            case 12: {
+                $entry = parseBouletcorp($entry);
                 break;
             }
         }
